@@ -8,21 +8,19 @@
  */
 
 import React from 'react';
-import { Switch, Route } from 'react-router-dom';
-
-import HomePage from 'containers/HomePage/Loadable';
-import NotFoundPage from 'containers/NotFoundPage/Loadable';
-
-import GlobalStyle from '../../global-styles';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import HomePage from '../HomePage/index2';
+import Contact from '../Contact/index';
+import Header from '../../components/Header/index';
 
 export default function App() {
   return (
     <div>
-      <Switch>
+      <Router>
+        <Header />
         <Route exact path="/" component={HomePage} />
-        <Route component={NotFoundPage} />
-      </Switch>
-      <GlobalStyle />
+        <Route path="/contact" component={Contact} />
+      </Router>
     </div>
   );
 }
