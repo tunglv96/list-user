@@ -12,7 +12,7 @@ class Header extends Component {
         <AppBar position="static" color="default">
           <Toolbar>
             <Typography variant="h6" color="inherit">
-              <Link to="/">Home</Link>
+              <Link to="/home">Home</Link>
               <Link to="/contact">Contact</Link>
             </Typography>
           </Toolbar>
