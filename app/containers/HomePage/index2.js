@@ -87,10 +87,6 @@ class HomePage extends Component {
               } 
             },
             { 
-              title: 'Username', 
-              field: 'username' 
-            },
-            { 
               title: 'Email', 
               field: 'email' 
             },

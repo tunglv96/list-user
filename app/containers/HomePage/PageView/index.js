@@ -87,7 +87,6 @@ class PageView extends Component {
               <TableRow>
                 <TableCell>ID</TableCell>
                 <TableCell>Name</TableCell>
-                <TableCell>Username</TableCell>
                 <TableCell>Email</TableCell>
               </TableRow>
             </TableHead>
@@ -99,7 +98,6 @@ class PageView extends Component {
                       return <React.Fragment>
                                 <TableCell>{product.id}</TableCell>
                                 <TableCell>{product.name}</TableCell>
-                                <TableCell>{product.username}</TableCell>
                                 <TableCell>{product.email}</TableCell>
                             </React.Fragment>
                             
