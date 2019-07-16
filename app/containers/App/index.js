@@ -1,28 +1,36 @@
-/**
- *
- * App.js
- *
- * This component is the skeleton around the actual pages, and should only
- * contain code that should be seen on all pages. (e.g. navigation bar)
- *
- */
+/* eslint-disable no-shadow */
+/* eslint-disable react/no-array-index-key */
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-undef */
+import React, { Component } from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Header from '../../components/Header/index';
+import routes from '../../routes';
 
-import React from 'react';
-import { Switch, Route } from 'react-router-dom';
+class App extends Component {
+  render() {
+    return (
+      <Router>
+        <Header />
+        <Switch>{this.showContentMenus(routes)}</Switch>
+      </Router>
+    );
+  }
 
-import HomePage from 'containers/HomePage/Loadable';
-import NotFoundPage from 'containers/NotFoundPage/Loadable';
-
-import GlobalStyle from '../../global-styles';
-
-export default function App() {
-  return (
-    <div>
-      <Switch>
-        <Route exact path="/" component={HomePage} />
-        <Route component={NotFoundPage} />
-      </Switch>
-      <GlobalStyle />
-    </div>
-  );
+  showContentMenus = routes => {
+    let result = null;
+    if (routes.length > 0) {
+      result = routes.map((route, index) => (
+        <Route
+          key={index}
+          exact={route.exact}
+          path={route.path}
+          component={route.main}
+        />
+      ));
+    }
+    return result;
+  };
 }
+
+export default App;
