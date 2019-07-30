@@ -79,6 +79,10 @@ class HomePage extends Component {
             { 
               title: 'Name', 
               field: 'name',
+            },
+            { 
+              title: 'User name', 
+              field: 'username',
               render: rowData => {
                 if (rowData.username.length > 8) {
                   return <span style={{ color: 'red' }}>{rowData.username}</span>
@@ -89,6 +93,14 @@ class HomePage extends Component {
             { 
               title: 'Email', 
               field: 'email' 
+            },
+            { 
+              title: 'Phone', 
+              field: 'phone' 
+            },
+            { 
+              title: 'Website', 
+              field: 'website' 
             },
           ]}
           // eslint-disable-next-line no-undef
