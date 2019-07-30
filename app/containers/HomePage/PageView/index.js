@@ -1,21 +1,7 @@
-/* eslint-disable no-unreachable */
-/* eslint-disable consistent-return */
-/* eslint-disable vars-on-top */
-/* eslint-disable no-cond-assign */
-/* eslint-disable prefer-destructuring */
-/* eslint-disable no-unused-expressions */
 /* eslint-disable array-callback-return */
-/* eslint-disable no-console */
-/* eslint-disable no-var */
-/* eslint-disable react/prop-types */
-/* eslint-disable indent */
-/* eslint-disable react/no-unused-state */
-/* eslint-disable no-undef */
-/* eslint-disable prettier/prettier */
-/* eslint-disable jsx-a11y/anchor-is-valid */
+/* eslint-disable consistent-return */
 /* eslint-disable no-unused-vars */
-/* eslint-disable react/jsx-no-undef */
-/* eslint-disable react/prefer-stateless-function */
+/* eslint-disable react/prop-types */
 import React, { Component } from 'react';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
@@ -50,10 +36,7 @@ class PageView extends Component {
   }
 
   render() {
-    var { match } = this.props;
-    // eslint-disable-next-line prettier/prettier
-
-    const { products } = this.state;
+    const { match } = this.props;
     return (
       <React.Fragment>
         <h3>ID: {match.params.id}</h3>

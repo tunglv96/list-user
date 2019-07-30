@@ -1,3 +1,4 @@
+/* eslint-disable react/prefer-stateless-function */
 /* eslint-disable react/prop-types */
 import React, { Component } from 'react';
 import Input from '@material-ui/core/Input';
@@ -11,7 +12,6 @@ import FormHelperText from '@material-ui/core/FormHelperText';
 import { withFormik, Form, Field } from 'formik';
 import * as Yup from 'yup';
 
-// eslint-disable-next-line react/prefer-stateless-function
 class Contact extends Component {
   render() {
     return (
@@ -29,7 +29,6 @@ class Contact extends Component {
                   fullWidth
                   margin="normal"
                   error={
-                    // eslint-disable-next-line react/prop-types
                     this.props.touched.username && !!this.props.errors.username
                   }
                 >
